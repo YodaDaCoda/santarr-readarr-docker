@@ -1,0 +1,15 @@
+services:
+  readarr:
+    build: .
+    container_name: readarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - METADATA_SERVER=
+    ports:
+      - 8788:8787
+    extra_hosts:
+      - "api.bookinfo.club:127.0.0.1"
+      - "www.goodreads.com:127.0.0.1"
+    restart: unless-stopped
