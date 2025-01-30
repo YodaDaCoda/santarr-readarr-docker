@@ -40,6 +40,9 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Expose HTTPS port
 EXPOSE 443
 
+# Set environment variable for METADATA_SERVER
+ENV METADATA_SERVER=""
+
 COPY start-nginx.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/start-nginx.sh
 ENTRYPOINT ["/bin/sh", "-c", "/usr/local/bin/start-nginx.sh & /init"]
