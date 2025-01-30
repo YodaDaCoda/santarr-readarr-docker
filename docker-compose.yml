@@ -3,7 +3,7 @@ networks:
   website:
 
 services:
-  readarr:
+  speakarr-santarr:
     build: .
     env_file:
       - stack.env
