@@ -6,7 +6,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - METADATA_SERVER=
+    env_file:
+      - stack.env
     ports:
       - 8788:8787
     extra_hosts:
