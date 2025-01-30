@@ -7,6 +7,9 @@ services:
     build: .
     env_file:
       - stack.env
+    networks:
+      - default
+      - website
     volumes:
       - ${CONFIG_DIR}:/config
     extra_hosts:
