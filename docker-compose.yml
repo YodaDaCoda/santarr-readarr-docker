@@ -12,6 +12,7 @@ services:
       - website
     volumes:
       - ${CONFIG_DIR}:/config
+      - ${EXTRA_VOLUMES}
     extra_hosts:
       - "api.bookinfo.club:127.0.0.1"
       - "www.goodreads.com:127.0.0.1"
