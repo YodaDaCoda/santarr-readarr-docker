@@ -1,6 +1,12 @@
 networks:
   default:
   website:
+  multimedia_prowlarr_santarr_speakarr:
+    external: true
+  multimedia_deluge_santarr_speakarr:
+    external: true
+  multimedia_sabnzbd_santarr_speakarr:
+    external: true
 
 services:
   speakarr-santarr:
@@ -10,6 +16,9 @@ services:
     networks:
       - default
       - website
+      - multimedia_prowlarr_santarr_speakarr
+      - multimedia_deluge_santarr_speakarr
+      - multimedia_sabnzbd_santarr_speakarr
     volumes:
       - ${CONFIG_DIR}:/config
       - ${EXTRA_VOLUMES}
